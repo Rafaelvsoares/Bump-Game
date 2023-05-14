@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &76515489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8950224603276397934, guid: 4256b962f7860934a8a483d91015566e, type: 3}
+  m_PrefabInstance: {fileID: 7940552614083924914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &555792638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4383326164722302908, guid: 7cfd5c5c3b7bcbc438cd0b11f79b5ff3, type: 3}
@@ -478,6 +483,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1596978878}
     m_Modifications:
+    - target: {fileID: 2135634517422647611, guid: 9f42e4578b08b8d4196a97b2564a9cf1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ace3d0ff8cf3b54ea9334c1035e8e6c, type: 2}
     - target: {fileID: 2996963999604216758, guid: 9f42e4578b08b8d4196a97b2564a9cf1, type: 3}
       propertyPath: m_Name
       value: Obstacle_001
@@ -492,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7524342536790816711, guid: 9f42e4578b08b8d4196a97b2564a9cf1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.946704
+      value: 14.93
       objectReference: {fileID: 0}
     - target: {fileID: 7524342536790816711, guid: 9f42e4578b08b8d4196a97b2564a9cf1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -656,6 +665,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 842884501550093012, guid: 4256b962f7860934a8a483d91015566e, type: 3}
   m_PrefabInstance: {fileID: 7940552614083924914}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7940552614083924932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76515489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a7d9564ebd0854da330098c55f76d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9052589385740727560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -710,6 +731,10 @@ PrefabInstance:
     - target: {fileID: 6942551360169945935, guid: 7cfd5c5c3b7bcbc438cd0b11f79b5ff3, type: 3}
       propertyPath: m_Name
       value: Launchpad_start_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942551360169945935, guid: 7cfd5c5c3b7bcbc438cd0b11f79b5ff3, type: 3}
+      propertyPath: m_TagString
+      value: Friendly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cfd5c5c3b7bcbc438cd0b11f79b5ff3, type: 3}
