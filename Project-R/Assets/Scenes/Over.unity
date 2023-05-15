@@ -641,10 +641,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7940552614083924931, guid: 4256b962f7860934a8a483d91015566e, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8950224603276397934, guid: 4256b962f7860934a8a483d91015566e, type: 3}
       propertyPath: m_Name
       value: Rocket_001
@@ -710,10 +706,6 @@ PrefabInstance:
     - target: {fileID: 6942551360169945935, guid: 7cfd5c5c3b7bcbc438cd0b11f79b5ff3, type: 3}
       propertyPath: m_Name
       value: Launchpad_start_001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6942551360169945935, guid: 7cfd5c5c3b7bcbc438cd0b11f79b5ff3, type: 3}
-      propertyPath: m_TagString
-      value: Friendly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cfd5c5c3b7bcbc438cd0b11f79b5ff3, type: 3}
