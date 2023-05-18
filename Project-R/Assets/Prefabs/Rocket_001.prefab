@@ -1122,6 +1122,8 @@ MonoBehaviour:
   rotationThrust: 100
   mainEngine: {fileID: 8300000, guid: 0bf47e1eef1f8fb4497b41cf62654a39, type: 3}
   jetBoosterParticles: {fileID: 6334992575327244935}
+  leftBoosterParticles: {fileID: 3154827828479614038}
+  rightBoosterParticles: {fileID: 1744241240275153308}
 --- !u!82 &7940552614083924931
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1317,6 +1319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
+--- !u!198 &1744241240275153308 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 584678573886053986, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
+  m_PrefabInstance: {fileID: 1164734907070377982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1916998600549268436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
@@ -1394,6 +1401,11 @@ PrefabInstance:
 --- !u!4 &2983200485928621598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
+  m_PrefabInstance: {fileID: 2581971204160733748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3154827828479614038 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 584678573886053986, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
   m_PrefabInstance: {fileID: 2581971204160733748}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2770526125358088595
