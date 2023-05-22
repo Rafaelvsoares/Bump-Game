@@ -33,55 +33,75 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up * thrustIntensity * Time.deltaTime);
-            if(jetBoosterParticles.isStopped)
-            {
-                jetBoosterParticles.Play();
-            }
-            if(!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(mainEngine);
-            }
+            StartThrusting();
         }
-        else {
-            audioSource.Stop();
-            jetBoosterParticles.Stop();
+        else 
+        {
+            StopThrusting();
         }
     }
-
-  
     void ProcessRotation()
     {
         if(Input.GetKey(KeyCode.A))
-        {   
-            if(rightBoosterParticles.isStopped)
-            {
-                rightBoosterParticles.Play();
-            }
-            ApplyRotation(rotationThrust);
+        {
+            RotateRight();
         }
         else if(Input.GetKey(KeyCode.D))
         {
-            if(leftBoosterParticles.isStopped)
-            {
-                leftBoosterParticles.Play();
-            }
-
-            ApplyRotation(-rotationThrust);
+            RotateLeft();
         }
         else
         {
-            leftBoosterParticles.Stop();
-            rightBoosterParticles.Stop();
+            StopRotation();
         }
-    
+
     }
 
-  private void ApplyRotation(float rotationThisFrame)
-  {
-    rb.freezeRotation = true;
-    transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
-    rb.freezeRotation = false;
-  }
+    void StopThrusting()
+    {
+        audioSource.Stop();
+        jetBoosterParticles.Stop();
+    }
+    void StartThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * thrustIntensity * Time.deltaTime);
+        if (jetBoosterParticles.isStopped)
+        {
+            jetBoosterParticles.Play();
+        }
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
+        }
+    }
+    
+    void RotateLeft()
+    {
+        if(leftBoosterParticles.isStopped)
+          {
+              leftBoosterParticles.Play();
+          }
+          ApplyRotation(-rotationThrust);
+    }
+    void RotateRight()
+    {
+      if (rightBoosterParticles.isStopped)
+      {
+        rightBoosterParticles.Play();
+      }
+      ApplyRotation(rotationThrust);
+    }
+    void StopRotation()
+    {
+        leftBoosterParticles.Stop();
+        rightBoosterParticles.Stop();
+    }
+
+    void ApplyRotation(float rotationThisFrame)
+    {
+        rb.freezeRotation = true;
+        transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
+        rb.freezeRotation = false;
+    }
 }
 
