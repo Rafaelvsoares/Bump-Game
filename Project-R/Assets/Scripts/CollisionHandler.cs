@@ -14,7 +14,7 @@ public class CollisionHandler : MonoBehaviour
     AudioSource audioSource;
     
     bool isTransitioning =  false;
-    bool isCollision = false;
+    bool isCollisionDisabled = false;
 
     void Start()
     {
@@ -23,14 +23,13 @@ public class CollisionHandler : MonoBehaviour
 
     void Update() 
     {
-        AdminLoadLevel();
-        DisableCollision();
+        AdminDebugKeys();
     }
 
     void OnCollisionEnter(Collision other) 
     {
-      if(isCollision) { return; }
-      if(isTransitioning) { return; }
+  
+      if(isTransitioning || isCollisionDisabled) { return; }
 
       switch (other.gameObject.tag)
       {
@@ -84,22 +83,18 @@ public class CollisionHandler : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    void AdminLoadLevel()
+    void AdminDebugKeys()
     {
-        if(Input.GetKey(KeyCode.L))
+        if(Input.GetKeyUp(KeyCode.L))
         {
             LoadNextLevel();
-        }  
-    }
-
-    void DisableCollision()
-    {
-        // Change to key press so it is one single input as this is for real time input.
-        if(Input.GetKey(KeyCode.C))
+        }
+        else if(Input.GetKeyDown(KeyCode.C))
         {
-            isCollision = !isCollision;
-            Debug.Log(isCollision);
+            isCollisionDisabled = !isCollisionDisabled;
+            Debug.Log(isCollisionDisabled);
         }
     }
 }
+
 
