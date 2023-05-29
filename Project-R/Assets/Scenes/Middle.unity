@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 10, z: 0}
-  movementFactor: 0.585
+  period: 2
 --- !u!1 &390147949
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,15 +723,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7940552614083924931, guid: 4256b962f7860934a8a483d91015566e, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8950224603276397934, guid: 4256b962f7860934a8a483d91015566e, type: 3}
       propertyPath: m_Name
       value: Rocket_001
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6598917183902710114, guid: 4256b962f7860934a8a483d91015566e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4256b962f7860934a8a483d91015566e, type: 3}
 --- !u!4 &7940552614083924925 stripped
 Transform:
